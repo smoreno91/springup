@@ -1,0 +1,76 @@
+<!--Preloader-->
+<div class="ip-header">
+  <div class="ip-logo">
+    <%= image_tag("logo-black.png", alt: "preloader", class: "preloaderLogo center-block")%>
+    <!--<img class="preloaderLogo center-block" src="images/logo/logo-black.png" alt="preloader">-->
+  </div>
+  <div class="ip-loader">
+    <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+            <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+            <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+        </svg>
+  </div>
+</div>
+<!--/ Preloader-->
+
+<div id="pageWrapper">
+  <!--Content Wrapper-->
+  <div class="contentWrapper">
+    <!--Home Section-->
+    <section id="home" class="mainBanner banner-3 coming-soon parallax clearfix" data-background="<%= image_url('8.jpg') %>">
+      <div class="parallax-overlay bg-strip"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-md-offset-2">
+            <div class="mainBanner-content text-center">
+              <div class="home-logo-centr">
+                <!--img src="images/logo/logo-3.png" alt="logo">-->
+                <%= image_tag("logo-3.png", alt: "logo")%>
+              </div>
+              <p class="text-uppercase coming-soon-font1 lh-nm paddb0 marT12"><strong>Coming Soon</strong></p>
+              <p class="font2 ltr-space-n marT12">Our website is under construction, we are working very hard to give you the best experience.</p>
+              <!-- Countdown -->
+              <div class="clearfix" id="countdown" data-year="2017" data-month="5" data-day="12" data-padzeroes="true" data-format="DHMS"></div>
+              <!-- /Countdown -->
+              <div class="col-sm-6 col-sm-offset-3 col-xs-offset-0">
+                <form class="notify-me clearfix" id="notifyme" action="golothemes.com" method="post">
+                  <div class="input-group col-md-8 col-xs-12 pull-left">
+                    <input type="text" placeholder="Enter Email Address" name="email" class="form-control" disabled>
+                  </div>
+                  <div class="input-group col-md-4 col-xs-12 pull-left">
+                    <input type="submit" value="Submit" class="submit text-uppercase" disabled>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video BG Init -->
+      <!--<div id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/SZEflIVnhH8',containment:'#home',autoPlay:true, showControls:false, showYTLogo: false, mute:true, startAt:0, opacity:1}"> </div>-->
+      <!-- End Video BG Init -->
+    </section>
+    <!--/ Home Section-->
+  </div>
+  <!--/ Content Wrapper-->
+</div>
+<!--Footer-->
+<footer class="clearfix" id="page_footer">
+  <div class="container text-center">
+    <div class="row">
+      <!--Footer Copy-->
+      <h5 class="copyright text-uppercase">COPYRIGHTS &copy; 2016 DESIGN BY <a target="_blank" href="#">SPRING UP</a>.</h5>
+      <!--/ Footer Copy-->
+      <!--Footer Social Icon-->
+      <ul class="footer-socials clearfix">
+        <li><a href="#" class="foo_social"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" class="foo_social"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" class="foo_social"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#" class="foo_social"><i class="fa fa-behance"></i></a></li>
+        <li><a href="#" class="foo_social"><i class="fa fa-pinterest"></i></a></li>
+      </ul>
+      <!--/ Footer Social Icon-->
+    </div>
+  </div>
+</footer>

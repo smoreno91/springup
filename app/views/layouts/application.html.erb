@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Springup</title>
-    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>Spring up</title>
+  <%= csrf_meta_tags %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <!--[if IE 9]>         <html class="ie9"> <![endif]-->
+  <!-- Meta Data -->
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+  
+  <!-- Core Meta Data -->
+  <meta name="author" content="Spring up">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- Open Graph Meta Data -->
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="Spring up">
+  <meta property="og:title" content="Spring up">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.springup.us">
+  <!--Favicon-->
+  <!--<link rel="shortcut icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="shortcut icon" href="images/favicons/favicon-16x16.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">-->
+  <!--Fonts Styles-->
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,700,800' rel='stylesheet' type='text/css'>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+  <!--HTML5 JS-->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+</head>
+
+<body id="page" data-spy="scroll" data-target=".navbar-nav" data-offset="100">
+  <%= yield %>
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</body>
+
 </html>
