@@ -2848,7 +2848,7 @@ div:hover>.hoverEffect-1 {
 	position: absolute;
 	left: 0;
 	top: 0;
-	background 300ms linear 0s;
+	background: 300ms linear 0s;
 }
 
 .img-hover-1 figure:hover figcaption .plus{
