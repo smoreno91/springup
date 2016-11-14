@@ -2320,7 +2320,7 @@ Other Elements Styles
 	z-index:0
 }
 .parallax-overlay.bg-strip {
-	background-image: url(<%= image-url("bg-strip.png") %>);
+	background-image: url(asset-path('bg-strip.png'));
 	background-repeat:repeat
 }
 /*Morph text*/
