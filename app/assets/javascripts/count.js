@@ -1,41 +1,17 @@
+/* global jQuery*/
+
 ( function( $ ) {
     "use strict";
     
     var $window = $(window);   
     var windowHeight = $window.height();
     
-    /*----------------------------------------------------*/
-    /* MOBILE DETECT FUNCTIONS
-    /*----------------------------------------------------*/
-    var isMobile = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i);
-        },
-        BlackBerry: function() {
-            return navigator.userAgent.match(/BlackBerry/i);
-        },
-        iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-        },
-        Opera: function() {
-            return navigator.userAgent.match(/Opera Mini/i);
-        },
-        Windows: function() {
-            return navigator.userAgent.match(/IEMobile/i);
-        },
-        any: function() {
-            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-        }
-    };
-
     /* --------------------------------*/
     /* - Doc Ready
     /* -------------------------------*/
-    
     $( document ).ready( function() {           
         
         $("section, div, figure").each(function(indx) {
-
             if ($(this).attr("data-background")) {
                 $(this).css("background-image", "url(" + $(this).data("background") + ")");
             }
@@ -45,9 +21,9 @@
 
         /*----------------------------------------------------*/
         /* Coming Soon Counter
-         /*----------------------------------------------------*/
+        /*----------------------------------------------------*/
         var comingsoon = $('#countdown');
-        var comingDate = new Date(comingsoon.data("year"),comingsoon.data("month")-1,comingsoon.data("day"));
+        var comingDate = new Date(comingsoon.data("year"), comingsoon.data("month")-1, comingsoon.data("day"));
         var padZeroes = comingsoon.data("padzeroes");
         var format = comingsoon.data("format");
 
@@ -56,32 +32,23 @@
             padZeroes: padZeroes,
             format: format
         });
-                
         
         /*----------------------------------------------------*/
         /*	Center Content for home
-         /*----------------------------------------------------*/
+        /*----------------------------------------------------*/
         var contentHeight = $('.mainBanner-content').height();
         var topContentMargin = (windowHeight - contentHeight) / 2;
         $('.mainBanner-content').css({
             "margin-top": topContentMargin + "px"
         });
 
-        /*----------------------------------------------------*/
-      /*  Background youtub video
-      /*----------------------------------------------------*/ 
-
-        if (!isMobile.any()) {
-            $(".player").mb_YTPlayer();
-        }
         
     });
     
-     /* --------------------------------*/
+    /* --------------------------------*/
     /* - Window Load
-     /* -------------------------------*/
+    /* -------------------------------*/
     $window.load(function() {
-        
         $('.parallax').each(function() {
             $(this).parallax("50%", 0.2);
         });
@@ -136,7 +103,5 @@
         $window.on('scroll', update).resize(update);
         update();
     };
-
-
 
 } )( jQuery );    

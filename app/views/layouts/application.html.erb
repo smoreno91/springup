@@ -2,47 +2,55 @@
 <html>
 
 <head>
-  <title>Spring up</title>
-  <%= csrf_meta_tags %>
+  <title>Spring Up</title>
 
-  <!--[if IE 9]>         <html class="ie9"> <![endif]-->
   <!-- Meta Data -->
   <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-  
-  <!-- Core Meta Data -->
-  <meta name="author" content="Spring up">
+  <%= csrf_meta_tags %>
+  <meta name="author" content="Spring Up">
   <meta name="description" content="">
   <meta name="keywords" content="">
   <!-- Open Graph Meta Data -->
   <meta property="og:description" content="">
-  <meta property="og:image" content="">
-  <meta property="og:site_name" content="Spring up">
-  <meta property="og:title" content="Spring up">
+  <meta property="og:image" content="<%= image_url('og_image-1200x1200.png') %>">
+  <meta property="og:site_name" content="Spring Up">
+  <meta property="og:title" content="Spring Up">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://www.springup.us">
-  <!--Favicon-->
-  <!--<link rel="shortcut icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="shortcut icon" href="images/favicons/favicon-16x16.ico" type="image/x-icon"/>
-  <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">-->
-  <!--Fonts Styles-->
+  
+  <!-- Favicons -->
+  <%= favicon_link_tag 'favicons/favicon.ico', rel: 'shortcut icon', type: 'image/x-icon', sizes: '16x16 24x24 32x32 48x48 64x64' %>
+  <%= favicon_link_tag 'favicons/favicon.png', rel: 'shortcut icon', type: 'image/png', sizes: '16x16 24x24 32x32 48x48 64x64 152x152' %>
+  <%= favicon_link_tag 'favicons/apple-touch-icon-precomposed-57x57.png', rel: 'apple-touch-icon-precomposed', sizes: '57x57' %>
+  <%= favicon_link_tag 'favicons/apple-touch-icon-57x57.png', rel: 'apple-touch-icon', sizes: '57x57' %>
+  <%= favicon_link_tag 'favicons/apple-touch-icon-72x72.png', rel: 'apple-touch-icon', sizes: '72x72' %>
+  <%= favicon_link_tag 'favicons/apple-touch-icon-114x114.png', rel: 'apple-touch-icon', sizes: '114x114' %>
+  <%= favicon_link_tag 'favicons/apple-touch-icon-120x120.png', rel: 'apple-touch-icon', sizes: '120x120' %>
+  <%= favicon_link_tag 'favicons/apple-touch-icon-144x144.png', rel: 'apple-touch-icon', sizes: '144x144' %>
+  <%= favicon_link_tag 'favicons/apple-touch-icon-152x152.png', rel: 'apple-touch-icon', sizes: '152x152' %>
+  <meta name="application-name" content="Spring Up">
+  <meta name="msapplication-TileImage" content="<%= image_url('favicons/msapplication-144.png') %>">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  
+  <!-- Fonts Styles -->
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,700,800' rel='stylesheet' type='text/css'>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body id="page" data-spy="scroll" data-offset="100">
+  
+  <%= render "preloader" %>
+  
+  <%= yield %>
+  
+  <%= render "footer" %>
   
   <!--HTML5 JS-->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  
-</head>
-
-<body id="page" data-spy="scroll" data-target=".navbar-nav" data-offset="100">
-  <%= yield %>
-  
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </body>
 
